@@ -20,8 +20,11 @@ const Module3Dashboard = () => {
   }, [navigate]);
 
   return (
-    <div className="h-screen w-full flex flex-col bg-background overflow-hidden">
-      {/* Barra fina superior: só a seta de voltar */}
+    <div
+      className="w-full flex flex-col bg-background overflow-hidden"
+      style={{ height: '100dvh' }}
+    >
+      {/* Barra superior: apenas a seta de voltar */}
       <div className="flex items-center px-4 h-14 shrink-0 border-b border-border bg-card">
         <button
           onClick={() => navigate('/dashboard')}
@@ -32,12 +35,15 @@ const Module3Dashboard = () => {
         </button>
       </div>
 
-      {/* Conteúdo ocupando todo o restante da tela */}
-      <div className="flex-1 min-h-0">
+      {/* Conteúdo: ocupa o resto da tela e sobe a base */}
+      <div
+        className="flex-1 min-h-0 w-full"
+        style={{ paddingBottom: 'calc(env(safe-area-inset-bottom) + 64px)' }}
+      >
         <iframe
           src={DIAGNOSTICO_URL}
           title="Diagnóstico de Ruptura"
-          className="w-full h-full"
+          className="w-full h-full block"
           style={{ border: 'none' }}
           allow="clipboard-write; fullscreen"
           allowFullScreen
