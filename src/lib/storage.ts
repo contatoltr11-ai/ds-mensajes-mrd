@@ -11,7 +11,7 @@ export interface UserData {
   nombre: string;
   dias_desde_ruptura: number;
   objetivo: 'reconquistar' | 'entender' | 'mejorar';
-  //  1
+  // Módulo 1
   modulo_1_progreso: number;
   modulo_1_lecciones_completadas: number[];
   modulo_1_fecha_inicio: string;
