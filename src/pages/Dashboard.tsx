@@ -278,7 +278,7 @@ const Dashboard = () => {
     } else if (moduleNumber === 2) {
       navigate('/modulo2');
     } else if (moduleNumber === 3) {
-      window.open('https://ssplan.shop/ds/', '_blank');
+      navigate('/modulo3');
     }
   };
 
