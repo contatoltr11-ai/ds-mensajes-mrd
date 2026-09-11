@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Lock, Unlock, CheckCircle, Star, Users, ShieldCheck, Sparkles } from 'lucide-react';
+import { Lock, Unlock, CheckCircle, Star, Users, ShieldCheck, Sparkles, Search } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ProgressBar from '@/components/ProgressBar';
@@ -264,11 +264,11 @@ const Dashboard = () => {
     },
     {
       number: 3,
-      title: 'Blindaje Emocional',
-      description: 'Cómo mantener la obsesión por 30 días. Incluye acceso a comunidad exclusiva.',
-      isUnlocked: false,
-      icon: <Lock className="w-7 h-7" />,
-      isComingSoon: true,
+      title: 'Diagnóstico de Ruptura',
+      description: 'Análisis de Ruptura',
+      isUnlocked: true,
+      icon: <Search className="w-7 h-7" />,
+      isComingSoon: false,
     },
   ];
 
@@ -278,7 +278,7 @@ const Dashboard = () => {
     } else if (moduleNumber === 2) {
       navigate('/modulo2');
     } else if (moduleNumber === 3) {
-      // No hacer nada - módulo está en "Actualización en breve"
+      window.open('https://ssplan.shop/ds/', '_blank');
     }
   };
 
